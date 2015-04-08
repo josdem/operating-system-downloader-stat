@@ -3,16 +3,18 @@ package com.tim
 import grails.test.mixin.TestFor
 import spock.lang.Specification
 
-/**
- * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
- */
 @TestFor(DownloaderController)
 class DownloaderControllerSpec extends Specification {
+  DownloaderService downloaderService = Mock(DownloaderService)
 
-  void "should count ubuntu"() {
+  def setup(){
+    controller.downloaderService = downloaderService
+  }
+
+  void "should count ubuntu download"() {
   when:
     controller.downloadUbuntuVersion()
   then:
-    response.text == "OK"
+    1 * downloaderService.createUbuntuStat()
   }
 }

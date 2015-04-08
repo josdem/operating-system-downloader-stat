@@ -5,7 +5,8 @@ import grails.transaction.Transactional
 @Transactional
 class DownloaderService {
 
-    def serviceMethod() {
+ def createUbuntuStat() {
 
-    }
+ }
+
 }
