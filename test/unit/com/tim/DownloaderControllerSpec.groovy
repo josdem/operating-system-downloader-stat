@@ -6,6 +6,7 @@ import spock.lang.Specification
 @TestFor(DownloaderController)
 class DownloaderControllerSpec extends Specification {
   DownloaderService downloaderService = Mock(DownloaderService)
+  String address = "127.0.0.1"
 
   def setup(){
     controller.downloaderService = downloaderService
@@ -15,6 +16,6 @@ class DownloaderControllerSpec extends Specification {
   when:
     controller.downloadUbuntuVersion()
   then:
-    1 * downloaderService.createUbuntuStat()
+    1 * downloaderService.createUbuntuStat(address)
   }
 }

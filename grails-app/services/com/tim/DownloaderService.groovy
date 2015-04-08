@@ -5,8 +5,11 @@ import grails.transaction.Transactional
 @Transactional
 class DownloaderService {
 
- def createUbuntuStat() {
-
+ def Downloader createUbuntuStat(String address) {
+   def downloader = new Downloader()
+   downloader.address = address
+   downloader.type = InstallerType.UBUNTU
+   return downloader
  }
 
 }
