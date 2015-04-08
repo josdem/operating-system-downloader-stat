@@ -9,12 +9,10 @@ import spock.lang.Specification
 @TestFor(DownloaderController)
 class DownloaderControllerSpec extends Specification {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
-    void "test something"() {
-    }
+  void "should count ubuntu"() {
+  when:
+    controller.downloadUbuntuVersion()
+  then:
+    response.text == "OK"
+  }
 }

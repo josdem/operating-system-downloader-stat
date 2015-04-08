@@ -1,5 +1,8 @@
 package com.tim
 
 class DownloaderController {
-    static scaffold = true
+
+  def downloadUbuntuVersion(){
+    render "OK"
+  }
 }
