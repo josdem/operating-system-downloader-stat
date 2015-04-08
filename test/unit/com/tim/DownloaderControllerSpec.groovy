@@ -17,5 +17,7 @@ class DownloaderControllerSpec extends Specification {
     controller.downloadUbuntuVersion()
   then:
     1 * downloaderService.createUbuntuStat(address)
+    response.contentType == "application/octet-stream"
+    response.getHeader("Content-disposition") == "attachment;filename=JMetadata.deb"
   }
 }
