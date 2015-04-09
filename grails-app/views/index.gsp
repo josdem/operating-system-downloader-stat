@@ -7,8 +7,6 @@
 </head>
 
 <body>
-  <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-  <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link><br/>
-  </g:each>
+  <a href="http://localhost:8080/operating-system-downloader-stat/downloader/downloadUbuntuVersion">JMetadata.deb</a>
 </body>
 </html>
