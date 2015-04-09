@@ -9,6 +9,7 @@ class DownloaderService {
    def downloader = new Downloader()
    downloader.address = address
    downloader.type = InstallerType.UBUNTU
+   downloader.save()
    return downloader
  }
 
